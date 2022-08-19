@@ -1,0 +1,56 @@
+{
+  // Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  "Print to console": {
+    "prefix": "log",
+    "body": ["console.log('$1');", "$2"],
+    "description": "Log output to console"
+  },
+  "Console log color": {
+    "prefix": "clog",
+    "body": ["console.log('%c$1', 'background-color:black;color:lime');", "$2"],
+    "description": "console.log() in color (Only works for strings)"
+  },
+  "querySelector": {
+    "prefix": "qs",
+    "body": ["document.querySelector('$1');", "$2"],
+    "description": "querySelector()"
+  },
+  "querySelectorAll": {
+    "prefix": "qsa",
+    "body": ["document.querySelectorAll('$1');", "$2"],
+    "description": "querySelectorAll()"
+  },
+  "querySelectorPartial": {
+    "prefix": "qsp",
+    "body":  ["document.querySelector('a[href*=\"example\"]')", "$2"],
+    "description": "querySelectorAll()"
+  },
+  "forEach": {
+    "prefix": "fe",
+    "body": ["Array.from($1).forEach(e=>console.log(e))", "$2"],
+    "description": "forEach()"
+  },
+  "fetch": {
+    "prefix": "fet",
+    "body": ["function htmlParse(raw){ return new DOMParser().parseFromString(raw, 'text/html')}fetch('/').then(e => e.text()).then(e => { console.log(htmlParse(e)) })", "$2"],
+    "description": "fetch with parser"
+  },
+  "localStorage Unique": {
+    "prefix": "storeUnique",
+    "body": ["var myObj = localStorage.getItem('$1');" \
+  "if(myObj)" \
+  "   myObj = JSON.parse(myObj);" \
+  "else\n myObj = {};\n" \
+  "function appendNewValue(name, value) {" \
+    "   myObj[name] = value;" \
+    "   localStorage.setItem('trin', JSON.stringify($1));" \
+  "}" \
+  "appendNewValue('$2', '$3');"],
+    "description": "Saves data immediately. Instead of saving every time, you can also add this persistence feature to the (before)unload handler"
+  }
+}
+  
