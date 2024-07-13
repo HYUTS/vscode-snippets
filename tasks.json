@@ -1,8 +1,7 @@
 // sanatize_url_paths.ps1 
 
 $get = Get-Clipboard -Format Text -TextFormatType Text -Raw
-$get.Replace("\", "\\")
-Write-Host $get  
+Write-Host $get.Replace("\", "\\")
 
 // tasks.json
 {
