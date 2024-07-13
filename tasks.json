@@ -1,0 +1,17 @@
+// sanatize_url_paths.ps1 
+
+$get = Get-Clipboard -Format Text -TextFormatType Text -Raw
+$get.Replace("\", "\\")
+Write-Host $get  
+
+// tasks.json
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "COPYPARSE",
+          "type": "shell",
+          "command": "C:\\Users\\Cmorr\\Powershell\\sanatize_url_paths.ps1"
+      },
+  ]
+}
